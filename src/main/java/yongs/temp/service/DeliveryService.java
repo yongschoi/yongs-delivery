@@ -44,6 +44,7 @@ public class DeliveryService {
 			// Delivery API call
 			// ...
 			// ...
+			// throw new Exception();
 			repo.insert(order.getDelivery());
 			String newOrderStr = mapper.writeValueAsString(order);
 			logger.info(">>>>> DELIVERY 성공  >>>>>> " + order.getNo());

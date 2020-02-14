@@ -1,8 +1,12 @@
 package yongs.temp.vo;
 
+import org.springframework.data.annotation.Id;
+
 import yongs.temp.model.Delivery;
 
 public class Order{
+	@Id
+	private String id;
 	private String no; // ORD-currentTimeMillis();
 	private int qty;
 	private long opentime;
