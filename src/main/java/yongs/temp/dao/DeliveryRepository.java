@@ -6,4 +6,5 @@ import yongs.temp.model.Delivery;
 
 public interface DeliveryRepository extends MongoRepository<Delivery, String> {
 	public void deleteByOrderNo(final String orderNo);
+	public Delivery findByOrderNo(final String orderNo);
 }

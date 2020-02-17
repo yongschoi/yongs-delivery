@@ -16,7 +16,14 @@ public class Delivery {
 	private String phone;
 	private long opentime;
 	private String orderNo;
+	private String type;
 	
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
 	public String getOrderNo() {
 		return orderNo;
 	}

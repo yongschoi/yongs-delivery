@@ -14,7 +14,14 @@ public class Order{
 	private User user;
 	private Payment payment;
 	private Delivery delivery;
+	private int status;
 	
+	public int getStatus() {
+		return status;
+	}
+	public void setStatus(int status) {
+		this.status = status;
+	}
 	public String getNo() {
 		return no;
 	}
