@@ -17,6 +17,7 @@ import yongs.temp.vo.Order;
 
 @Service
 public class DeliveryService {
+	// status 0:주문/결제완료, 1:상품준비, 2:배송중, 3:배송완료 
 	private static final Logger logger = LoggerFactory.getLogger(DeliveryService.class);
 	// for sender
 	private static final String DELIVERY_ORDER_EVT = "delivery-to-order";
@@ -59,6 +60,11 @@ public class DeliveryService {
 	// 최초 생성된 Delivery에 선정된 배송업체를 저장한다.(실질적인 Delivery data생성)
 	public void updateDelivery(Delivery delivery) throws JsonProcessingException {
 		Delivery savedDelivery = repo.findByOrderNo(delivery.getOrderNo());
+		logger.debug("delivery.getOrderNo( => " + delivery.getOrderNo());
+		logger.debug("savedDelivery => " + savedDelivery);
+		logger.debug("savedDelivery.getType() => " + savedDelivery.getType());
+		
+		
 		
 		long curr = System.currentTimeMillis();
 		String no = "DEL" + curr;
