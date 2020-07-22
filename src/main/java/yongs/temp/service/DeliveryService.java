@@ -63,9 +63,7 @@ public class DeliveryService {
 		logger.debug("delivery.getOrderNo( => " + delivery.getOrderNo());
 		logger.debug("savedDelivery => " + savedDelivery);
 		logger.debug("savedDelivery.getType() => " + savedDelivery.getType());
-		
-		
-		
+			
 		long curr = System.currentTimeMillis();
 		String no = "DEL" + curr;
 		savedDelivery.setNo(no);
