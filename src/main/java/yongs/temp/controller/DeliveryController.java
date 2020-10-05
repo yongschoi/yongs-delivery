@@ -23,6 +23,5 @@ public class DeliveryController {
     public void update(@RequestBody Delivery delivery) throws Exception{
     	logger.debug("yongs-delivery|DeliveryController|update({})", delivery.getOrderNo());
         service.updateDelivery(delivery);
-    }
-  
+    }  
 }

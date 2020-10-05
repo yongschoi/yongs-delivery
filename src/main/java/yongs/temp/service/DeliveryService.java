@@ -53,7 +53,7 @@ public class DeliveryService {
 			kafkaTemplate.send(DELIVERY_ROLLBACK_EVT, orderStr);	
 			logger.debug("[DELIVERY Exception(배송 실패)]");
 		}
-		
+		// 성공하든 실패하든 상관없이
 		ack.acknowledge();
 	}
 	
